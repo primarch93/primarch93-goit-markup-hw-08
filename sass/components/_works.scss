@@ -1,0 +1,36 @@
+.works {
+    padding-bottom: 94px;
+  }
+  .works__header {
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 42px;
+    text-align: center;
+    letter-spacing: 0.03em;
+  }
+  .work__cards {
+    display: flex;
+    gap: 30px;
+    margin-top: 50px;
+  }
+  .work__table {
+    position: relative;
+  }
+  .work__txt {
+    position: absolute;
+    bottom: 0;
+    width: 370px;
+    height: 70px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 1.14;
+    text-align: center;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    color:$color-minitext-fon;
+    background-color:$bg-cards;
+    opacity: 80%;
+  }

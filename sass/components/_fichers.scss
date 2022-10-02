@@ -1,0 +1,36 @@
+.fichers {
+    padding-top: 94px;
+    padding-bottom: 94px;
+  }
+  .fichers__list {
+    display: flex;
+    gap: 30px;
+  }
+  .fichers__card {
+    flex-basis: calc((100% - 3 * 30px) / 4);
+  }
+  .fichers__header {
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 16px;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+    color: #212121;
+  }
+  .fichers__description {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 24px;
+    letter-spacing: 0.03em;
+    color:$primary-color-text-fon
+  }
+  .fichers__tabl {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 120px;
+    width: 270px;
+    margin-bottom: 30px;
+    background-color: #f5f4fa;
+  }
