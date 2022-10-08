@@ -8,15 +8,15 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Raleway:wght@700&family=Roboto:wght@400;500;700;900&display=swap"
-      rel="stylesheet"
-    />
-    <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.1.0/modern-normalize.min.css"
       integrity="sha512-wpPYUAdjBVSE4KJnH1VR1HeZfpl1ub8YT/NKx4PuQ5NmX2tKuGu6U/JRp5y+Y8XG2tV+wKQpNHVUX03MfMFn9Q=="
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Raleway:wght@700&family=Roboto:wght@400;500;700;900&display=swap"
+      rel="stylesheet"
     />
     <link rel="stylesheet" href="./css/main.min.css" />
   </head>
@@ -26,6 +26,44 @@
         <a href="./index.html" lang="en" class="logo"
           ><span class="logo__web">Web</span>Studio
         </a>
+        <button class="h-button" name="choise" value="mainbutton" type="button" data-hmodal-open >
+          <svg class="menu-icon"  width="40" height="40">
+<use href="./Images/icons.svg#icon-menu_40px">
+</use>
+          </svg>
+        </button>
+        <div class="back is-hidden" data-hmodal>
+          <div class="mobile-modal">
+            <button type="button" class="modal__button" data-hmodal-close>
+              <svg class="modal-button__icon"  width="18" height="18">
+              <use href="./Images/icons.svg#icon-close_40px"></use>
+              </svg>
+            </button>
+            <ul class="mobile__list">
+              <li class="mobile__nav">
+                <a href="./index.html" class="mobile__link"> Студія</a>
+              </li>
+              <li class="mobile__nav">
+                <a href="./portfolio.html" class="mobile-current__link"> Портфоліо</a>
+              </li>
+              <li class="mobile-nav"><a href="./#" class="mobile__link"> Контакти</a></li>
+            </ul>
+            <ul class="contact-mob__list">
+              <li class="header-contact-mob__item">
+                <a href="tel:+380961111111" class="header-contact-mob__links">+38 096 111 11 11</a>
+              </li>
+              <li class="header-contact-mob__item">
+                <a href="mailto:info@devstudio.com" class="header-contact-mob__link">info@devstudio.com</a>
+              </li>
+            </ul>
+            <ul class="mobsoc">
+              <li class="mobsoc__item"><a href="#" class="mobsoc__link">Instagram</a></li>
+              <li class="mobsoc__item"><a href="#" class="mobsoc__link">Twitter</a></li>
+              <li class="mobsoc__item"><a href="#" class="mobsoc__link">Facebook</a></li>
+              <li class="mobsoc__item"><a href="#" class="mobsoc__link">LinkedIn</a></li>
+            </ul>
+          </div>
+        </div>
         <nav class="nav">
           <ul class="header__list">
             <li class="header__nav">
@@ -37,18 +75,18 @@
             <li class="header-nav"><a href="./#" class="header__link"> Контакти</a></li>
           </ul>
         </nav>
-        <ul class="contact-list">
-          <li class="header-contact__item">
-            <a href="mailto:info@devstudio.com" class="header-contact__link">
-              <svg class="header-contact__icon" width="16px" height="12px">
+        <ul class="contact__hed">
+          <li class="contact__item">
+            <a href="mailto:info@devstudio.com" class="contact__link m">
+              <svg class="contact__icon" width="16px" height="12px">
                 <use href="./Images/icons.svg#icon-mail"></use>
               </svg>
               info@devstudio.com</a
             >
           </li>
-          <li class="header-contact__item">
-            <a href="tel:+380961111111" class="header-contact__link">
-              <svg class="header-contact__icon" width="10px" height="16px">
+          <li class="contact__item">
+            <a href="tel:+380961111111" class="contact__link t">
+              <svg class="contact__icon" width="10px" height="16px">
                 <use href="./Images/icons.svg#icon-tel"></use>
               </svg>
               +38 096 111 11 11</a
@@ -60,7 +98,7 @@
     <main class="main-portfolio">
       <section class="portfolio__button">
         <div class="container">
-          <h1 class="visually-hidden">властивості</h1>
+          <h1 class="port__hidden">властивості</h1>
           <ul class="port__list">
             <li class="button-taps">
               <button type="button" class="portfolio__tap-l">Усі</button>
@@ -82,13 +120,18 @@
             <li class="portfolio__block-topic">
               <a class="portfolio__block-link" href="#">
                 <div class="portfolio__block-board">
-                  <img
+                  <picture>
+                    <source media="(max-width: 767px)" srcset="./images/mobile/pf1-mb-@1x.jpg, ./images/mobile/pf1-mb-@2x.jpg">
+                    <source media="(max-width: 1199px)" srcset="./images/tablet/pf1-tb-@1x.jpg, ./images/tablet/pf1-tb-@2x.jpg">
+                    <source media="(min-width: 1200px)" srcset="./images/desc/pf1-ds-@1x.jpg, ./images/desc/pf1-ds-@2x.jpg">
+                    <img
                     class="portfolio__block-page"
                     src="./Images/noteb.jpg"
                     alt="ноутбук"
                     width="370"
                     height="294"
                   />
+                  </picture>
                   <p class="portfolio__card-text">
                     Ресурс пропонує комплексні пропозиції з різним рівнем
                     функціоналу та сервісів. Все це дозволить відвідувачу
@@ -104,13 +147,18 @@
             <li class="portfolio__block-topic">
               <a class="portfolio__block-link" href="#">
                 <div class="portfolio__block-board">
-                  <img
+                  <picture>
+                    <source media="(max-width: 767px)" srcset="./images/mobile/pf2-mb-@1x.jpg, ./images/mobile/pf2-mb-@2x.jpg">
+                    <source media="(max-width: 1199px)" srcset="./images/tablet/pf2-tb-@1x.jpg, ./images/tablet/pf2-tb-@2x.jpg">
+                    <source media="(min-width: 1200px)" srcset="./images/desc/pf2-ds-@1x.jpg, ./images/desc/pf2-ds-@2x.jpg">
+                    <img
                     class="portfolio__block-page"
                     src="./Images/basc.jpg"
                     alt="два хлопця грають в баскетбол"
                     width="370"
                     height="294"
                   />
+                  </picture>
                   <p class="portfolio__card-text">
                     Ресурс пропонує комплексні пропозиції з різним рівнем
                     функціоналу та сервісів. Все це дозволить відвідувачу
@@ -126,13 +174,18 @@
             <li class="portfolio__block-topic">
               <a class="portfolio__block-link" href="#">
                 <div class="portfolio__block-board">
-                  <img
+                  <picture>
+                    <source media="(max-width: 767px)" srcset="./images/mobile/pf3-mb-@1x.jpg, ./images/mobile/pf3-mb-@2x.jpg">
+                    <source media="(max-width: 1199px)" srcset="./images/tablet/pf3-tb-@1x.jpg, ./images/tablet/pf3-tb-@2x.jpg">
+                    <source media="(min-width: 1200px)" srcset="./images/desc/pf3-ds-@1x.jpg, ./images/desc/pf3-ds-@2x.jpg">
+                    <img
                     class="portfolio__block-page"
                     src="./Images/logoR.jpg"
                     alt="логотип ресторану"
                     width="370"
                     height="294"
                   />
+                  </picture>
                   <p class="portfolio__card-text">
                     Ресурс пропонує комплексні пропозиції з різним рівнем
                     функціоналу та сервісів. Все це дозволить відвідувачу
@@ -148,13 +201,18 @@
             <li class="portfolio__block-topic">
               <a class="portfolio__block-link" href="#">
                 <div class="portfolio__block-board">
-                  <img
+                  <picture>
+                    <source media="(max-width: 767px)" srcset="./images/mobile/pf4-mb-@1x.jpg, ./images/mobile/pf4-mb-@2x.jpg">
+                    <source media="(max-width: 1199px)" srcset="./images/tablet/pf4-tb-@1x.jpg, ./images/tablet/pf4-tb-@2x.jpg">
+                    <source media="(min-width: 1200px)" srcset="./images/desc/pf4-ds-@1x.jpg, ./images/desc/pf4-ds-@2x.jpg">
+                    <img
                     class="portfolio__block-page"
                     src="./Images/headph.jpg"
                     alt="навушники"
                     width="370"
                     height="294"
                   />
+                  </picture>
                   <p class="portfolio__card-text">
                     Ресурс пропонує комплексні пропозиції з різним рівнем
                     функціоналу та сервісів. Все це дозволить відвідувачу
@@ -170,13 +228,18 @@
             <li class="portfolio__block-topic">
               <a class="portfolio__block-link" href="#">
                 <div class="portfolio__block-board">
-                  <img
+                  <picture>
+                    <source media="(max-width: 767px)" srcset="./images/mobile/pf5-mb-@1x.jpg, ./images/mobile/pf5-mb-@2x.jpg">
+                    <source media="(max-width: 1199px)" srcset="./images/tablet/pf5-tb-@1x.jpg, ./images/tablet/pf5-tb-@2x.jpg">
+                    <source media="(min-width: 1200px)" srcset="./images/desc/pf5-ds-@1x.jpg, ./images/desc/pf4-ds-@2x.jpg">
+                    <img
                     class="portfolio__block-page"
                     src="./Images/boxes.jpg"
                     alt="ноутбук за яким працюють"
                     width="370"
                     height="294"
                   />
+                  </picture>
                   <p class="portfolio__card-text">
                     Ресурс пропонує комплексні пропозиції з різним рівнем
                     функціоналу та сервісів. Все це дозволить відвідувачу
@@ -192,13 +255,18 @@
             <li class="portfolio__block-topic">
               <a class="portfolio__block-link" href="#">
                 <div class="portfolio__block-board">
-                  <img
+                  <picture>
+                    <source media="(max-width: 767px)" srcset="./images/mobile/pf6-mb-@1x.jpg, ./images/mobile/pf6-mb-@2x.jpg">
+                    <source media="(max-width: 1199px)" srcset="./images/tablet/pf6-tb-@1x.jpg, ./images/tablet/pf6-tb-@2x.jpg">
+                    <source media="(min-width: 1200px)" srcset="./images/desc/pf6-ds-@1x.jpg, ./images/desc/pf6-ds-@2x.jpg">
+                    <img
                     class="portfolio__block-page"
                     src="./Images/monobl.jpg"
                     alt="Моноблок apple"
                     width="370"
                     height="294"
                   />
+                  </picture> 
                   <p class="portfolio__card-text">
                     Ресурс пропонує комплексні пропозиції з різним рівнем
                     функціоналу та сервісів. Все це дозволить відвідувачу
@@ -216,13 +284,18 @@
             <li class="portfolio__block-topic">
               <a class="portfolio__block-link" href="#">
                 <div class="portfolio__block-board">
-                  <img
+                  <picture>
+                    <source media="(max-width: 767px)" srcset="./images/mobile/pf7-mb-@1x.jpg, ./images/mobile/pf7-mb-@2x.jpg">
+                    <source media="(max-width: 1199px)" srcset="./images/tablet/pf7-tb-@1x.jpg, ./images/tablet/pf7-tb-@2x.jpg">
+                    <source media="(min-width: 1200px)" srcset="./images/desc/pf7-ds-@1x.jpg, ./images/desc/pf7-ds-@2x.jpg">
+                    <img
                     class="portfolio__block-page"
                     src="./Images/book.jpg"
                     alt="відкрита книга"
                     width="370"
                     height="294"
                   />
+                  </picture>
                   <p class="portfolio__card-text">
                     Ресурс пропонує комплексні пропозиції з різним рівнем
                     функціоналу та сервісів. Все це дозволить відвідувачу
@@ -238,6 +311,10 @@
             <li class="portfolio__block-topic">
               <a class="portfolio__block-link" href="#">
                 <div class="portfolio__block-board">
+                  <picture>
+                  <source media="(max-width: 767px)" srcset="./images/mobile/pf8-mb-@1x.jpg, ./images/mobile/pf8-mb-@2x.jpg">
+                  <source media="(max-width: 1199px)" srcset="./images/tablet/pf8-tb-@1x.jpg, ./images/tablet/pf8-tb-@2x.jpg">
+                  <source media="(min-width: 1200px)" srcset="./images/desc/pf8-ds-@1x.jpg, ./images/desc/pf8-ds-@2x.jpg">
                   <img
                     class="portfolio__block-page"
                     src="./Images/lab.jpg"
@@ -245,6 +322,7 @@
                     width="370"
                     height="294"
                   />
+                  </picture>
                   <p class="portfolio__card-text">
                     Ресурс пропонує комплексні пропозиції з різним рівнем
                     функціоналу та сервісів. Все це дозволить відвідувачу
@@ -260,13 +338,18 @@
             <li class="portfolio__block-topic">
               <a class="portfolio__block-link" href="#">
                 <div class="portfolio__block-board">
-                  <img
+                  <picture>
+                    <source media="(max-width: 767px)" srcset="./images/mobile/pf9-mb-@1x.jpg, ./images/mobile/pf9-mb-@2x.jpg">
+                    <source media="(max-width: 1199px)" srcset="./images/tablet/pf9-tb-@1x.jpg, ./images/tablet/pf9-tb-@2x.jpg">
+                    <source media="(min-width: 1200px)" srcset="./images/desc/pf9-ds-@1x.jpg, ./images/desc/pf9-ds-@2x.jpg">
+                    <img
                     class="portfolio__block-page"
                     src="./Images/noteb2.jpg"
                     alt="ноутбук за яким працюють"
                     width="370"
                     height="294"
                   />
+                  </picture>
                   <p class="portfolio__card-text">
                     Ресурс пропонує комплексні пропозиції з різним рівнем
                     функціоналу та сервісів. Все це дозволить відвідувачу
@@ -284,21 +367,22 @@
       </section>
     </main>
     <footer class="bottom">
-      <div class="bottom-container">
-        <div>
+      <div class=" container bottom-container">
+        <div class="bottom-fotter">
+        <div class="bottom-a">
           <a href="/" lang="en" class="bottom__logo"
             ><span class="bottom__logo-web">Web</span>Studio</a
           >
           <address class="bottom__adress">
             <ul class="adress-list">
-              <li class="bottom__adress-street">м. Київ, пр-т Лесі Українки, 26</li>
-              <li class="bottom__contact">
-                <a href="mailto:info@devstudio.com" class="bottom__adress-link"
+              <li class="bottom__street">м. Київ, пр-т Лесі Українки, 26</li>
+              <li class="bottom__cont">
+                <a href="mailto:info@devstudio.com" class="bottom__adr-link"
                   >info@devstudio.com</a
                 >
               </li>
-              <li class="bottom__contact">
-                <a href="tel:+380961111111" class="bottom__adress-link"
+              <li class="bottom__cont">
+                <a href="tel:+380961111111" class="bottom__adr-link"
                   >+38 096 111 11 11</a
                 >
               </li>
@@ -338,9 +422,9 @@
             </li>
           </ul>
         </div>
+      </div>
         <div class="bottom__sub-go">
           <p class="bottom__sub-tittle">Підпишіться на розсилку</p>
-          <div class="bottom__sub-box">
             <form class="bottom__sub-form" action="#">
               <input class="bottom__sub-mail" type="e-mail" name="user-mail" placeholder="E-mail">
           <button class="bottom__sub-button" type="submit"> 
@@ -352,7 +436,7 @@
             </form>
           </div>
         </div>
-      </div>
     </footer>
+    <script src="./js/hmodal.js"></script>
   </body>
 </html>

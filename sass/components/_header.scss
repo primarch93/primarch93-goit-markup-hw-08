@@ -4,6 +4,7 @@
 }
 .container__header {
   display: flex;
+  align-items: center;
 
   @media screen and (min-width:1200px) {
     display: flex;
@@ -60,7 +61,7 @@
     overflow-y: scroll;
     display: flex;
     flex-direction: column;
-    z-index: 5;
+    z-index: 99;
     position: absolute;
     top: 50%;
     left: 50%;
@@ -269,17 +270,18 @@
      
   .contact__hed{
     display: none;
+
     @media screen and (min-width:768px) {
-      display: flex;
-      flex-direction: column;
-      margin-left: auto;
-      gap: 10px;
-  }
+        display: flex;
+        flex-direction: column;
+        margin-left: auto;
+        gap: 10px;
+    }
+
     @media screen and (min-width:1200px) {
-      margin-left: auto;
-      flex-direction: row;
-      gap: 50px;
-  }
+        margin-left: auto;
+        flex-direction: row;
+    }
 }
 .contact__icon{
   fill: $primary-color-text-fon;
