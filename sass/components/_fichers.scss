@@ -1,36 +1,82 @@
-.fichers {
-    padding-top: 94px;
-    padding-bottom: 94px;
-  }
-  .fichers__list {
-    display: flex;
-    gap: 30px;
-  }
-  .fichers__card {
-    flex-basis: calc((100% - 3 * 30px) / 4);
-  }
-  .fichers__header {
-    font-weight: 700;
-    font-size: 14px;
-    line-height: 16px;
-    letter-spacing: 0.03em;
-    text-transform: uppercase;
-    margin-bottom: 10px;
-    color: #212121;
-  }
-  .fichers__description {
-    font-weight: 400;
-    font-size: 14px;
-    line-height: 24px;
-    letter-spacing: 0.03em;
-    color:$primary-color-text-fon
-  }
-  .fichers__tabl {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 120px;
-    width: 270px;
+.fichers__list {
+    @media screen and (min-width:768px) {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-wrap: wrap;
+        margin: -15px;
+    }
+    @media screen and (min-width:1200px) {
+        display: flex;
+        flex-wrap: nowrap;
+        align-items: stretch;
+        margin: 0;
+    }
+}
+.fichers__card{
+@media screen and (max-width: 767px) {
     margin-bottom: 30px;
-    background-color: #f5f4fa;
-  }
+}
+@media screen and (min-width: 768px) {
+    width: calc((100% - 2 * 30px) / 2);
+    margin: 15px;
+}
+@media screen and (min-width:1200px) {
+    flex-basis: 270px;
+    margin: 0 30px 0 0;
+    &:last-child {
+        margin-right: 0;
+    }
+}
+}
+.fichers__tabl{
+display: flex;
+align-items: center;
+justify-content: center;
+height: 120px;
+background: $fon-comand;
+border-radius: 4px;
+margin-bottom: 30px;
+@media screen and (min-width:768px) {
+    width: 354px;
+}
+@media screen and (min-width:1200px) {
+    width: 270px;
+}
+}
+.fichers__logo{
+fill: $border-logo;
+}
+.fichers__header{
+margin-top: 0;
+margin-bottom: 10px;
+font-size: 14px;
+font-weight: 700;
+line-height: 1.14;
+letter-spacing: 0.03em;
+color: $color-text;
+text-transform: uppercase;
+@media screen and (max-width: 767px) {
+text-align: center;
+}
+}
+.fichers__description{
+margin-top: 0;
+margin-bottom: 0;
+font-size: 14px;
+line-height: 1.71;
+letter-spacing: 0.03em;
+color: $primary-color-text-fon;
+}
+.fichers-hidden{
+position: absolute;
+width: 1px;
+height: 1px;
+margin: -1px;
+border: 0;
+padding: 0;
+white-space: nowrap;
+clip-path: inset(100%);
+clip: rect(0 0 0 0);
+overflow: hidden;
+}

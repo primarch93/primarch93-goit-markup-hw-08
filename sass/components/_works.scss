@@ -1,22 +1,30 @@
-.works {
-    padding-bottom: 94px;
-  }
-  .works__header {
-    font-weight: 700;
+.works{
+    display: none;
+    padding-top: 0;
+    @media screen and (min-width:1200px) {
+        display: block;
+    }
+}
+.works__header{
+    margin-bottom: 50px;
     font-size: 36px;
-    line-height: 42px;
-    text-align: center;
+    font-weight: 700;
+    line-height: 1.16;
     letter-spacing: 0.03em;
-  }
-  .work__cards {
+    text-align: center;
+    color: $color-text;
+}
+.work__cards{
     display: flex;
     gap: 30px;
-    margin-top: 50px;
-  }
-  .work__table {
+}
+.work__card{
+    display: flex;
+}
+.work__table{
     position: relative;
-  }
-  .work__txt {
+}
+.work__txt{
     position: absolute;
     bottom: 0;
     width: 370px;
@@ -30,7 +38,6 @@
     text-align: center;
     letter-spacing: 0.03em;
     text-transform: uppercase;
-    color:$color-minitext-fon;
-    background-color:$bg-cards;
-    opacity: 80%;
-  }
+    color: $color-minitext-fon;
+    background: $bg-cards;
+}
